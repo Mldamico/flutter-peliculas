@@ -60,4 +60,11 @@ class Pelicula {
     overview = json['overview'];
     releaseDate = json['release_date'];
   }
+
+  getPosterImg() {
+    if (posterPath == null) {
+      return 'https://icon-library.com/images/no-photo-icon/no-photo-icon-5.jpg';
+    }
+    return 'https://image.tmdb.org/t/p/w500/$posterPath';
+  }
 }
